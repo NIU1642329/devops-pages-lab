@@ -1,0 +1,70 @@
+name: Release site (gate + deploy + smoke test)
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+env:
+  SITE_URL: https://niu1642329.github.io/devops-pages-lab
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stamp the version into the site
+        run: echo "$GITHUB_SHA" > version.txt
+      - uses: actions/configure-pages@v5
+      - name: Build with Jekyll (keeps include_relative working)
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - uses: actions/upload-pages-artifact@v3
+
+  validate:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+      - name: Unpack the exact artifact that would be deployed
+        run: mkdir site && tar -xf artifact.tar -C site
+      - name: Gate checks (markers, homepage, version, internal links)
+        run: python3 scripts/check_site.py site "$GITHUB_SHA"
+
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  smoke-test:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Live site must serve this exact version
+        run: |
+          for i in $(seq 1 20); do
+            served=$(curl -fsS "$SITE_URL/version.txt?run=$GITHUB_RUN_ID-$i" || echo "unreachable")
+            echo "try $i: live=$served expected=$GITHUB_SHA"
+            if [ "$served" = "$GITHUB_SHA" ]; then
+              curl -fsS "$SITE_URL/?run=$GITHUB_RUN_ID" | grep -q "Recent activity"
+              echo "✓ live site serves $GITHUB_SHA and renders the activity section"
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "✗ live site still serves '$served', not $GITHUB_SHA"
+          exit 1
