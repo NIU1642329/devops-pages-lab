@@ -4,16 +4,16 @@ DevOps 軟體開發與維運 · NTUST · Fall 2026 · Assignment 7: GitHub Pages
 
 ## Recent activity
 <!--START_SECTION:activity-->
-1. 📝 Committed to main in [NIU1642329/devops-pages-lab](https://github.com/NIU1642329/devops-pages-lab/commit/aa9c6c9a25ba24fdf0012520a645b5fcb5ad662e)
-2. 📝 Committed to main in [NIU1642329/devops-pages-lab](https://github.com/NIU1642329/devops-pages-lab/commit/1b6bc4e2662b79995ecfa42225b3bb23bd43d5a3)
-3. 📝 Committed to main in [NIU1642329/devops-pages-lab](https://github.com/NIU1642329/devops-pages-lab/commit/fb4bae19fd0835b4c9c5edc2f0e41a48d71d51d9)
-4. 🎉 Created a new branch main in [NIU1642329/devops-pages-lab](https://github.com/NIU1642329/devops-pages-lab/tree/main)
-5. 📝 Committed to main in [NIU1642329/devops-pages-lab](https://github.com/NIU1642329/devops-pages-lab/commit/52cbc465392556f729d1deb0aa34252d89f3085f)
-6. 🔀 Merged PR #3 in [teresapaa/activity-log-devops-assignments](https://github.com/teresapaa/activity-log-devops-assignments/pull/3)
-7. 🔀 Merged PR #4 in [teresapaa/activity-log-devops-assignments](https://github.com/teresapaa/activity-log-devops-assignments/pull/4)
-8. 🔀 Merged PR #5 in [teresapaa/activity-log-devops-assignments](https://github.com/teresapaa/activity-log-devops-assignments/pull/5)
-9. 🎉 Created a new branch e2-laia in [teresapaa/activity-log-devops-assignments](https://github.com/teresapaa/activity-log-devops-assignments/tree/e2-laia)
-10. 📥 Opened PR #5 in [teresapaa/activity-log-devops-assignments](https://github.com/teresapaa/activity-log-devops-assignments/pull/5)
+1. 🔀 Merged PR #8 in [NIU1642329/devsecops-lab](https://github.com/NIU1642329/devsecops-lab/pull/8)
+2. 🔀 Merged PR #9 in [NIU1642329/devsecops-lab](https://github.com/NIU1642329/devsecops-lab/pull/9)
+3. 📥 Opened PR #9 in [NIU1642329/devsecops-lab](https://github.com/NIU1642329/devsecops-lab/pull/9)
+4. 📥 Opened PR #8 in [NIU1642329/devsecops-lab](https://github.com/NIU1642329/devsecops-lab/pull/8)
+5. 🗣 Commented on PR #1 in [NIU1642329/devsecops-lab](https://github.com/NIU1642329/devsecops-lab/issues/1#issuecomment-6782533323)
+6. 🗣 Commented on PR #3 in [NIU1642329/devsecops-lab](https://github.com/NIU1642329/devsecops-lab/issues/3#issuecomment-6782527662)
+7. 🗣 Commented on PR #2 in [NIU1642329/devsecops-lab](https://github.com/NIU1642329/devsecops-lab/issues/2#issuecomment-6782516179)
+8. 📝 Committed to main in [NIU1642329/devops-pages-lab](https://github.com/NIU1642329/devops-pages-lab/commit/aa9c6c9a25ba24fdf0012520a645b5fcb5ad662e)
+9. 📝 Committed to main in [NIU1642329/devops-pages-lab](https://github.com/NIU1642329/devops-pages-lab/commit/1b6bc4e2662b79995ecfa42225b3bb23bd43d5a3)
+10. 📝 Committed to main in [NIU1642329/devops-pages-lab](https://github.com/NIU1642329/devops-pages-lab/commit/fb4bae19fd0835b4c9c5edc2f0e41a48d71d51d9)
 <!--END_SECTION:activity-->
 
 ## About this site
